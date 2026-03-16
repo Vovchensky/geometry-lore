@@ -78,7 +78,7 @@ npm run build
 [demo](https://vovchensky.github.io/geometry-lore/) · [русский](#лор-геометрии)
 
 <a href="https://vovchensky.github.io/geometry-lore/">
-  <img src="./public/og.png" alt="geometry lore" width="1200" />
+  <img src="./public/og-english.png" alt="geometry lore" width="1200" />
 </a>
 
 </div>
