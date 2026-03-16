@@ -1,0 +1,1 @@
+export { MiddleAges } from './MiddleAges'

@@ -1,0 +1,18 @@
+.divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    $color-border 20%,
+    $color-accent-muted 50%,
+    $color-border 80%,
+    transparent 100%
+  );
+  margin: 4rem 0;
+  transform-origin: center;
+
+  @include respond(tablet) {
+    margin: 6rem 0;
+  }
+}

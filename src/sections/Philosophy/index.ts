@@ -1,0 +1,1 @@
+export { Philosophy } from './Philosophy'

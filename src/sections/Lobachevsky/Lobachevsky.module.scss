@@ -1,0 +1,44 @@
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+
+  @include respond(laptop) {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+}
+
+.text {
+  order: 1;
+
+  @include respond(laptop) {
+    order: 2;
+  }
+}
+
+.visual {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include respond(laptop) {
+    order: 1;
+  }
+}
+
+.svg {
+  width: 100%;
+  max-width: 400px;
+  filter: drop-shadow(0 0 6px rgba($color-accent, 0.15));
+
+  @include respond(laptop) {
+    max-width: 450px;
+  }
+
+  @include respond(ultrawide) {
+    max-width: 600px;
+  }
+}

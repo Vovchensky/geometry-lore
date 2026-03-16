@@ -1,0 +1,23 @@
+.wrapper {
+  position: relative;
+}
+
+.decor {
+  position: absolute;
+  right: -8%;
+  top: 10%;
+  width: 200px;
+  pointer-events: none;
+  opacity: 0.8;
+
+  @include respond(mobile) {
+    width: 130px;
+    right: -3%;
+    top: 5%;
+  }
+
+  @include respond(ultrawide) {
+    width: 280px;
+    right: -5%;
+  }
+}

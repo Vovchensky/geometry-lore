@@ -1,0 +1,75 @@
+.postulates {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin: 3rem 0;
+  max-width: 700px;
+}
+
+.postulate {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  min-height: 70px;
+  background: $color-bg-secondary;
+  border-left: 2px solid transparent;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  position: relative;
+
+  &:first-child {
+    border-radius: 6px 6px 0 0;
+  }
+
+  &:last-child {
+    border-radius: 0 0 6px 6px;
+    border-left-color: $color-accent;
+    background: $color-bg-tertiary;
+    min-height: 90px;
+  }
+
+  &:hover {
+    border-left-color: $color-accent;
+    background: $color-bg-tertiary;
+  }
+}
+
+.postulateNumber {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: $color-accent;
+  min-width: 1.5rem;
+  flex-shrink: 0;
+  padding-top: 0.1rem;
+}
+
+.postulateContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.postulateText {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.6;
+  color: $color-text-secondary;
+}
+
+.postulateHint {
+  display: block;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: $color-accent;
+  opacity: 0;
+  transform: translateY(4px);
+  margin-top: 0.5rem;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  pointer-events: none;
+
+  .postulate:hover & {
+    opacity: 0.6;
+    transform: translateY(0);
+  }
+}

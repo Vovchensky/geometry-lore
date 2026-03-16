@@ -1,0 +1,47 @@
+.switcher {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  background: rgba($color-bg, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba($color-border, 0.5);
+  color: $color-text-muted;
+  font-family: $font-primary;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  cursor: crosshair;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+
+  &:hover {
+    color: $color-accent;
+    border-color: rgba($color-accent, 0.3);
+    background: rgba($color-bg, 0.75);
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+  @include respond(desktop) {
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: $color-bg;
+  opacity: 0;
+  pointer-events: none;
+}

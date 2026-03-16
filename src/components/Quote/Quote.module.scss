@@ -1,0 +1,26 @@
+.quote {
+  border-left: 2px solid $color-accent;
+  padding: 1.5rem 0 1.5rem 2rem;
+  margin: 2.5rem 0;
+  max-width: 640px;
+
+  @include respond(mobile) {
+    padding-left: 1.25rem;
+  }
+}
+
+.text {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.7;
+  color: $color-text;
+}
+
+.author {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-style: normal;
+  color: $color-text-muted;
+}

@@ -1,0 +1,21 @@
+.formula {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  color: $color-accent;
+  padding: 1.5rem 0;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.content {
+  display: inline-block;
+}
+
+.decorative {
+  position: absolute;
+  font-size: clamp(3rem, 8vw, 8rem);
+  opacity: 0.03;
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}

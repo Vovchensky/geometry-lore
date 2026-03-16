@@ -1,0 +1,53 @@
+.etymology {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 3rem 0;
+  flex-wrap: wrap;
+
+  @include respond(mobile) {
+    gap: 1rem;
+    justify-content: center;
+  }
+}
+
+.etymologyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.greek {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: $color-accent;
+}
+
+.result {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: $color-text;
+}
+
+.translation {
+  font-size: 0.85rem;
+  color: $color-text-muted;
+  text-transform: lowercase;
+}
+
+.plus,
+.equals {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  color: $color-text-muted;
+  font-weight: 300;
+}
+
+.bgFormula {
+  right: 5%;
+  top: 10%;
+
+  @include respond(mobile) {
+    display: none;
+  }
+}

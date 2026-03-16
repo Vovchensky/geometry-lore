@@ -1,0 +1,23 @@
+.wrapper {
+  position: relative;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.formula {
+  position: absolute;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  color: $color-accent;
+  opacity: 0.035;
+  user-select: none;
+  white-space: nowrap;
+  transform: translateX(-50%);
+
+  @include respond(mobile) {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    opacity: 0.02;
+  }
+}

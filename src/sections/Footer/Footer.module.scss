@@ -1,0 +1,144 @@
+.footer {
+  padding: 6rem 0 3rem;
+  position: relative;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.svgWrapper {
+  width: 160px;
+  margin-bottom: 3rem;
+
+  @include respond(tablet) {
+    width: 200px;
+  }
+
+  @include respond(desktop) {
+    width: 240px;
+  }
+}
+
+.shapes {
+  width: 100%;
+  filter: drop-shadow(0 0 8px rgba($color-accent, 0.12));
+}
+
+.greek {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  color: $color-accent;
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.closing {
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: $color-text-muted;
+  max-width: 380px;
+}
+
+.line {
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, $color-accent, transparent);
+  opacity: 0.3;
+  margin: 2.5rem 0;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    font-size: 0.85rem;
+    color: $color-text-muted;
+    text-transform: lowercase;
+    cursor: crosshair;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}
+
+.dot {
+  color: $color-border;
+  font-size: 0.7rem;
+}
+
+.author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: crosshair;
+  text-decoration: none;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: drop-shadow(0 0 8px rgba($color-accent, 0.4));
+  }
+
+  &:hover .authorName {
+    background: none;
+    -webkit-text-fill-color: $color-accent;
+    color: $color-accent;
+  }
+}
+
+.avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid rgba($color-accent, 0.2);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+
+  .author:hover & {
+    opacity: 1;
+  }
+}
+
+.authorName {
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: linear-gradient(
+    90deg,
+    $color-text-muted 0%,
+    $color-accent 50%,
+    $color-text-muted 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+  transition:
+    -webkit-text-fill-color 0.3s ease,
+    color 0.3s ease;
+}
+
+@keyframes shimmer {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: 200% center;
+  }
+}

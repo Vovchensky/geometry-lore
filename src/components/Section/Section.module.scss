@@ -1,0 +1,14 @@
+.section {
+  @include section-spacing;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  @include container;
+}
+
+.fullWidth {
+  max-width: none;
+  padding: 0;
+}

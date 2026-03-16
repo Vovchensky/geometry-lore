@@ -1,0 +1,55 @@
+@use 'reset';
+
+body {
+  font-family: $font-primary;
+  background-color: $color-bg;
+  color: $color-text;
+  cursor: crosshair;
+  overflow-x: hidden;
+}
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+::selection {
+  background-color: rgba($color-accent, 0.3);
+  color: $color-text;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: $color-bg;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $color-border;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $color-text-muted;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,71 @@
+$color-bg: #0a0a0a;
+$color-bg-secondary: #131313;
+$color-bg-tertiary: #1c1c1c;
+$color-text: #efefef;
+$color-text-secondary: #b8b8b8;
+$color-text-muted: #808080;
+$color-accent: #edc574;
+$color-accent-muted: rgba(237, 197, 116, 0.15);
+$color-border: #252525;
+
+$font-primary: 'Space Grotesk', sans-serif;
+
+$max-width: 1200px;
+$max-width-wide: 1600px;
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-laptop: 1024px;
+$bp-desktop: 1440px;
+$bp-ultrawide: 2560px;
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: #{$bp-tablet - 1px}) {
+      @content;
+    }
+  } @else if $breakpoint == tablet {
+    @media (min-width: $bp-tablet) {
+      @content;
+    }
+  } @else if $breakpoint == laptop {
+    @media (min-width: $bp-laptop) {
+      @content;
+    }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  } @else if $breakpoint == ultrawide {
+    @media (min-width: $bp-ultrawide) {
+      @content;
+    }
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @include respond(desktop) {
+    padding: 0 2rem;
+  }
+
+  @include respond(ultrawide) {
+    max-width: $max-width-wide;
+  }
+}
+
+@mixin section-spacing {
+  padding: 6rem 0;
+
+  @include respond(tablet) {
+    padding: 8rem 0;
+  }
+
+  @include respond(desktop) {
+    padding: 10rem 0;
+  }
+}

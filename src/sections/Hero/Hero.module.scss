@@ -1,0 +1,86 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.content {
+  width: 100%;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+
+  @include respond(tablet) {
+    padding: 0 3rem;
+  }
+
+  @include respond(desktop) {
+    padding: 0 5rem;
+  }
+
+  @include respond(ultrawide) {
+    padding: 0 8rem;
+  }
+}
+
+.title {
+  font-size: clamp(4rem, 14vw, 18rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-transform: lowercase;
+  color: #ffffff;
+  cursor: crosshair;
+  user-select: none;
+
+  @include respond(ultrawide) {
+    font-size: 20rem;
+  }
+}
+
+.subtitle {
+  margin-top: 2.5rem;
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  line-height: 1.6;
+  color: $color-text-secondary;
+  max-width: 520px;
+
+  @include respond(ultrawide) {
+    max-width: 700px;
+    font-size: 1.6rem;
+  }
+}
+
+.easterEgg {
+  position: fixed;
+  top: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 200;
+}
+
+.easterEggText {
+  display: inline-block;
+  font-size: clamp(0.85rem, 1.5vw, 1.1rem);
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-style: italic;
+  color: $color-accent;
+  padding: 0.5rem 1.25rem;
+  background: $color-bg;
+  border: 1px solid rgba($color-accent, 0.15);
+  border-radius: 6px;
+  white-space: nowrap;
+}
