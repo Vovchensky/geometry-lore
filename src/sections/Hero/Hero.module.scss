@@ -42,6 +42,7 @@
   color: #ffffff;
   cursor: crosshair;
   user-select: none;
+  opacity: 0;
 
   @include respond(ultrawide) {
     font-size: 20rem;
@@ -55,6 +56,7 @@
   line-height: 1.6;
   color: $color-text-secondary;
   max-width: 520px;
+  opacity: 0;
 
   @include respond(ultrawide) {
     max-width: 700px;
